@@ -4,11 +4,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
-
-    public static final String HELLO_BABY = "Hey Sweetheart :D";
+@Qualifier("setterGreetingService")
+public class SetterGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return HELLO_BABY;
+        return "Hey From Setter Junk";
     }
 }

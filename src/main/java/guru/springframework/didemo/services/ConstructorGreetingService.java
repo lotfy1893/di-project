@@ -3,12 +3,11 @@ package guru.springframework.didemo.services;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service
-public class GreetingServiceImpl implements GreetingService {
-
-    public static final String HELLO_BABY = "Hey Sweetheart :D";
+@Service("constructorGreetingService")
+@Qualifier("constructorGreetingService")
+public class ConstructorGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return HELLO_BABY;
+        return "Hey from the Constructor junk!";
     }
 }
